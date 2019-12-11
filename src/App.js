@@ -5,8 +5,12 @@ function App() {
   return (
     <div className="App">
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Sumar</button>
-      <button onClick={() => setCount(count - 1)}>Restar</button>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>
+        Sumar
+      </button>
+      <button onClick={() => setCount(prevCount => prevCount - 1)}>
+        Restar
+      </button>
       <button onClick={() => setCount(0)}>Reiniciar</button>
     </div>
   );
